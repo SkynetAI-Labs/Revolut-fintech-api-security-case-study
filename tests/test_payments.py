@@ -191,3 +191,85 @@ def test_rejected_transfers_never_call_monitoring(
         payments.transfer_funds(sender, receiver, amount)
 
     assert calls == []
+
+
+@pytest.mark.parametrize("field", ["sender", "receiver", "amount"])
+@pytest.mark.parametrize("invalid", [True, False, 1.0, 0.5, "1", None, 0, -1, 2**63])
+def test_transfer_rejects_invalid_integer_inputs_before_database_access(
+    monkeypatch, field, invalid
+):
+    def unexpected_connection():
+        pytest.fail("Invalid inputs must be rejected before opening a database")
+
+    monkeypatch.setattr(payments, "get_connection", unexpected_connection)
+    values = {"sender": 1, "receiver": 2, "amount": 100}
+    values[field] = invalid
+    with pytest.raises(ValueError, match="positive SQLite-range integer"):
+        payments.transfer_funds(
+            values["sender"], values["receiver"], values["amount"]
+        )
+
+
+def test_recipient_overflow_preserves_ledger(test_database):
+    connection = test_database()
+    connection.execute(
+        "UPDATE accounts SET balance_pence = ? WHERE id = 2",
+        (payments.SQLITE_MAX_INTEGER,),
+    )
+    connection.commit()
+    connection.close()
+
+    with pytest.raises(ValueError, match="Recipient balance would exceed"):
+        payments.transfer_funds(1, 2, 1)
+
+    connection = test_database()
+    try:
+        assert [row[0] for row in connection.execute(
+            "SELECT balance_pence FROM accounts ORDER BY id"
+        )] == [1000000, payments.SQLITE_MAX_INTEGER]
+        assert connection.execute("SELECT COUNT(*) FROM transactions").fetchone()[0] == 0
+        assert connection.execute("SELECT COUNT(*) FROM monitoring_alerts").fetchone()[0] == 0
+    finally:
+        connection.close()
+
+
+def test_recipient_exact_integer_limit_preserves_precision(test_database):
+    connection = test_database()
+    connection.execute(
+        "UPDATE accounts SET balance_pence = ? WHERE id = 2",
+        (payments.SQLITE_MAX_INTEGER - 100,),
+    )
+    connection.commit()
+    connection.close()
+    payments.transfer_funds(1, 2, 100)
+    connection = test_database()
+    try:
+        receiver = connection.execute(
+            "SELECT balance_pence, typeof(balance_pence) FROM accounts WHERE id = 2"
+        ).fetchone()
+        assert receiver[0] == payments.SQLITE_MAX_INTEGER
+        assert receiver[1] == "integer"
+        assert connection.execute(
+            "SELECT balance_pence FROM accounts WHERE id = 1"
+        ).fetchone()[0] == 999900
+    finally:
+        connection.close()
+
+
+@pytest.mark.parametrize("account_id", [1, 2])
+def test_noninteger_stored_balance_is_rejected(test_database, account_id):
+    connection = test_database()
+    connection.execute(
+        "UPDATE accounts SET balance_pence = 500000.5 WHERE id = ?",
+        (account_id,),
+    )
+    connection.commit()
+    connection.close()
+    with pytest.raises(ValueError, match="Account balance must be"):
+        payments.transfer_funds(1, 2, 100)
+    connection = test_database()
+    try:
+        assert connection.execute("SELECT COUNT(*) FROM transactions").fetchone()[0] == 0
+        assert connection.execute("SELECT COUNT(*) FROM monitoring_alerts").fetchone()[0] == 0
+    finally:
+        connection.close()

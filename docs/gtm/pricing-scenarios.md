@@ -1,7 +1,7 @@
 # Pricing Comparison Scenarios
 
 **Research date:** 23 October 2026
-**Status:** Hypothetical usage assumptions; provider calculations pending
+**Status:** Hypothetical usage assumptions; domestic calculations published, cross-border totals unresolved
 
 ## Common Basis
 
@@ -60,5 +60,4 @@ without identifying it as a separate comparison.
 
 ## Results Status
 
-Provider pricing checks and calculations remain pending.
-No cheapest-provider or savings claim is established.
+Domestic calculations and conditional cross-border components are published in [pricing-results.md](pricing-results.md). Complete cross-border quotes remain unresolved. No cheapest-provider or savings claim is established.

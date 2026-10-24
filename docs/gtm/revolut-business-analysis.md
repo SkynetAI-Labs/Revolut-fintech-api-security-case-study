@@ -2,7 +2,7 @@
 
 **Accessed:** 23 October 2026
 **Source:** S006, official product overview
-**Status:** Feature overview checked; pricing and eligibility review pending
+**Status:** Feature overview checked; subsequent pricing and eligibility desk research is documented in [eligibility-and-terms.md](eligibility-and-terms.md) and [pricing-results.md](pricing-results.md). Customer-specific suitability remains unvalidated.
 
 ## Advertised Capabilities
 
@@ -26,8 +26,10 @@ independent performance findings or a recommendation.
 - The portfolio simulation does not reproduce the provider's full product
   or establish its actual architecture or security controls.
 
-## Remaining Analysis
+## Follow-on Analysis
 
-1. Verify plan pricing, billing basis and relevant allowances.
-2. Review eligibility, onboarding and material terms.
-3. Map verified capabilities to candidate needs, identifying gaps.
+1. Published pricing and billing analysis: [pricing-results.md](pricing-results.md).
+2. Published eligibility and terms review: [eligibility-and-terms.md](eligibility-and-terms.md).
+3. Capability mapping and unresolved requirements: [capability-fit.md](capability-fit.md).
+
+These desk-research steps do not establish approval, customer demand or tested integration performance.

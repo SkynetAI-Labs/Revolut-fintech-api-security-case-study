@@ -3,7 +3,7 @@
 **Project:** Independent Revolut Business market intelligence and GTM case study
 **Author:** SkynetAI-Labs
 **Started:** 23 October 2026
-**Status:** Research brief in development
+**Status:** Completed research brief for the published case study; customer validation remains outstanding
 
 ## Commercial Questions
 

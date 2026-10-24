@@ -52,7 +52,4 @@ Not established:
 
 ## Working Conclusion
 
-All three candidates remain under consideration. Cross-border activity
-and operational fit should drive qualification, rather than employee
-count alone. Select the primary segment only after competitor analysis
-and explicit segment scoring.
+This staged assessment considered all three candidates. The completed [segment scoring](segment-scoring.md) subsequently selected agencies provisionally, with sensitivity and customer-validation gaps recorded in the [ICP](ideal-customer-profile.md). Cross-border activity and operational fit should drive qualification rather than employee count alone.
