@@ -130,3 +130,10 @@ Banners are linked beside the corresponding root README sections; the Lab 12 cas
 ## Completion boundary
 
 The audit covers the reviewed repository and documented evidence. Fixed defects, remaining recommendations, historical scans, new CI verification and unvalidated commercial assumptions must not be conflated. A passing workflow does not establish production readiness or commercial viability.
+
+
+## Audit remediation verification
+
+[Workflow 40136285242](https://github.com/SkynetAI-Labs/Revolut-fintech-api-security-case-study/actions/runs/40136285242) passed for commit `6590e193d1dddc9de238456d8746766433b7b936`, including both payment fixes, all 31 new regression cases and the pinned actions. The combined suite reported **231 passed, 10 warnings**. Dependency consistency, Bandit, pip-audit, Gitleaks, Docker build/export and the configured Trivy HIGH/CRITICAL scan passed. The warnings remain documented dependency deprecations; no security threshold was lowered.
+
+Later documentation commits do not change the tested application, tests or workflow. Their own automated status is available on [audit PR #1](https://github.com/SkynetAI-Labs/Revolut-fintech-api-security-case-study/pull/1).
