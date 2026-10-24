@@ -22,6 +22,8 @@ These phases share one repository. Test counts refer to the combined project sui
 
 ## Lab 1 — Business Banking API
 
+![Revolut Business — Portfolio Lab 08](skynet-lab-08.png)
+
 Implemented:
 
 - FastAPI application with interactive OpenAPI documentation
@@ -33,6 +35,7 @@ Implemented:
 - Atomic transfers and transaction rollback
 - Insufficient-funds and currency compatibility checks
 - Rejection of invalid amounts, same-account transfers and nonexistent accounts
+- Strict positive integer inputs for account IDs and pence amounts, including rejection of booleans, fractions, strings and values outside SQLite's signed-integer range
 - Automated API and payment integrity tests
 
 Payment execution is an internal Python service, with no public HTTP payment endpoint.
@@ -40,6 +43,8 @@ Payment execution is an internal Python service, with no public HTTP payment end
 The initial API milestone passed 11 tests. The combined suite expanded to 38 tests during Lab 2 and 200 tests during Lab 4.
 
 ## Lab 2 — Authentication and API Security
+
+![Revolut Business — Portfolio Lab 09](skynet-lab-09.png)
 
 Implemented:
 
@@ -67,6 +72,8 @@ Security headers:
 Registration, credential authentication and token creation are internal Python helpers. Public registration and login HTTP endpoints are not implemented.
 
 ## Lab 3 — Docker, GitHub Actions and DevSecOps
+
+![Revolut Business — Portfolio Lab 10](skynet-lab-10.png)
 
 Implemented:
 
@@ -107,6 +114,8 @@ The completed Lab 3 candidate reported zero HIGH/CRITICAL findings. No explicit 
 GitHub verification passed for remediation commit `d2ff68f` and documentation commit `d3c675a`.
 
 ## Lab 4 — Fraud Detection and Transaction Monitoring
+
+![Revolut Business — Portfolio Lab 11](skynet-lab-11.png)
 
 Implemented and locally tested:
 
@@ -398,11 +407,13 @@ This is an educational prototype, not a production banking or fraud-prevention s
 - Dependency warnings, the local Docker DNS workaround and legacy-builder notice remain documented.
 - Sequential CI steps can prevent later checks from running after an earlier failure.
 - Security results are point-in-time evidence; future runs may report new findings.
-- Commercial research and GTM strategy remain planned.
+- Commercial research and a hypothetical GTM strategy are published; complete cross-border quotes and customer validation remain outstanding.
 
 Passing tests and scans demonstrate the checks performed; they do not establish production readiness. Use fictional data only.
 
 ## Lab 5 — Market Intelligence and GTM Strategy
+
+![Revolut Business — Portfolio Lab 12](skynet-lab-12.png)
 
 **Status:** Research and strategy case study published; GitHub checks passed for `9ab86f9`.
 
@@ -443,3 +454,10 @@ remain unvalidated.
 Independent educational portfolio project developed by SkynetAI-Labs.
 
 Not affiliated with or endorsed by Revolut. No real banking systems, customer data or funds are used.
+
+
+## Portfolio Labs 08–12 Audit — 24 October 2026
+
+See [AUDIT_LABS_08_12.md](AUDIT_LABS_08_12.md) for the five phase-by-phase audit results, reproduced payment-input defect and fix, source checks, open recommendations and verification boundaries.
+
+The historical 200-test result above is retained. This audit adds 31 payment-input and balance-integrity regression cases; the resulting full-suite count and scan results must be read from the corresponding GitHub Actions run. Passing technical checks does not validate commercial assumptions.
