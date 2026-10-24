@@ -39,4 +39,4 @@
 - Paraphrase findings and retain attribution.
 - Record conflicting evidence and unresolved questions.
 - Recheck material pricing, eligibility and product claims before publication.
-- This register begins empty; no external research has yet been verified.
+- The published register contains 25 dated sources (S001-S025). Original access dates remain unchanged; subsequent checks are recorded in the repository audit.

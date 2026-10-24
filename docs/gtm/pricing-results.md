@@ -4,6 +4,8 @@
 **Basis:** pricing-scenarios.md
 **Status:** Domestic calculation completed; cross-border totals unresolved
 
+**24 October 2026 audit:** Source URLs, UK plan fees, allowance treatment and headline arithmetic were rechecked. Original research dates are preserved. This is not a provider quote or an applicant suitability assessment.
+
 ## Scenario A: Domestic Baseline
 
 Assume standard electronic GBP transfers to external UK bank accounts,

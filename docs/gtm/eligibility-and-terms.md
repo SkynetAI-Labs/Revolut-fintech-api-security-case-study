@@ -10,7 +10,7 @@ Ltd e-money accounts. Do not assume all existing accounts have migrated.
 
 Protection claims must identify the account entity and applicable
 eligibility and exclusions. Do not equate safeguarding with deposit
-insurance. Independent regulator/scheme verification remains outstanding.
+insurance. The subsequent [protection and sector review](protection-and-sector-checks.md) records regulator and FSCS desk checks; exact account applicability and current register permissions still require confirmation.
 
 ## Qualification Focus
 
@@ -63,7 +63,7 @@ questions are resolved only to this stated extent.
 
 ## Remaining Checks
 
-- Independently verify regulatory status and protection arrangements.
+- Recheck current Financial Services Register permissions and protection applicability for the specific account and deposit.
 - Review exact sector restrictions for the selected customer profile.
 - Recheck fees, tax treatment and material conditions before publication.
 - Check integration functionality rather than relying on its name alone.

@@ -1,3 +1,5 @@
+![Revolut Business — Portfolio Lab 12](../../skynet-lab-12.png)
+
 # Lab 5 — UK SME Market Intelligence and GTM Strategy
 
 **Author:** SkynetAI-Labs
@@ -153,3 +155,8 @@ passing on 23 October 2026. Local checks confirmed the document structure,
 source-register consistency, document links and headline arithmetic.
 These checks do not validate customer demand, assumptions or commercial
 viability. Research limitations and unresolved evidence remain documented.
+
+
+## Repository Audit — 24 October 2026
+
+The [Labs 08–12 audit](../../AUDIT_LABS_08_12.md) records the source rechecks, arithmetic and link checks, documentation reconciliation and remaining research gaps. Original source access dates are preserved. The matching Lab 12 banner identifies this as an independent Revolut Business portfolio case study.

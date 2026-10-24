@@ -56,6 +56,4 @@ case study; no unsupported ranking should replace them.
 
 ## Decision for the Next Stage
 
-Keep all three candidate segments under consideration. Use an explicit
-scoring framework to select one provisional target, showing assumptions
-and uncertainty rather than presenting the selection as validated demand.
+The subsequent [segment scoring](segment-scoring.md) compared all three candidates and selected agencies provisionally. Its sensitivity analysis removes their lead when two unvalidated assumptions change. The selection is not validated demand.

@@ -1,6 +1,6 @@
 # Portfolio Lab 12 — Prepared Entry
 
-**Status:** Draft for final review; not published to the profile README.
+**Status:** Published case-study summary; the existing profile already lists portfolio Lab 12. Profile changes are outside this audit.
 
 ## Title
 
@@ -8,9 +8,9 @@ Revolut Business — Market Intelligence and GTM Strategy
 
 ## Project Link
 
-https://github.com/SkynetAI-Labs/Revolut-business-fintech-security-gtm/tree/main/docs/gtm
+https://github.com/SkynetAI-Labs/Revolut-fintech-api-security-case-study/tree/main/docs/gtm
 
-The link will become available after the documents are pushed to GitHub.
+The case-study documents are published at the link above.
 
 ## Description
 
@@ -22,7 +22,7 @@ identifies unresolved pricing and customer-validation gaps.
 
 ## Suggested Portfolio Table Row
 
-| 12 | Revolut Business — Market Intelligence and GTM Strategy | UK SME research, competitor analysis, provisional ICP, positioning and hypothetical acquisition economics | [Case study](https://github.com/SkynetAI-Labs/Revolut-business-fintech-security-gtm/tree/main/docs/gtm) | Prepared; final review and publication pending |
+| 12 | Revolut Business — Market Intelligence and GTM Strategy | UK SME research, competitor analysis, provisional ICP, positioning and hypothetical acquisition economics | [Case study](https://github.com/SkynetAI-Labs/Revolut-fintech-api-security-case-study/tree/main/docs/gtm) | Published; assumptions and evidence gaps documented |
 
 Adapt the columns to the existing profile table before publication.
 Do not overwrite the profile README without reviewing its current content.

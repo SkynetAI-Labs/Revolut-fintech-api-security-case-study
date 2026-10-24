@@ -68,8 +68,7 @@ provider access or sponsorship arrangements exist.
 
 ## Budget and Metrics
 
-The next stage will define illustrative resource costs, funnel
-assumptions and decision thresholds.
+Illustrative resource costs, funnel assumptions and decision thresholds are defined in [commercial-model.md](commercial-model.md) and [execution-plan-and-risks.md](execution-plan-and-risks.md). They remain hypothetical and are not executed results.
 
 Keep cash expenditure separate from staff-time valuation.
 Do not assume referral income or access to provider unit economics.
